@@ -5,6 +5,7 @@ from nltk.stem.porter import PorterStemmer
 import os
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
+import pickle
 
 def stem(text):
     """
@@ -100,15 +101,17 @@ def recommend(anime, df=anime_processed_df):
             break
 
     results = []
+    posters = []
     for i in recommendations:
         row = df.iloc[i[0]]
         if type(row['English Name']) == float:
             results.append(row['Name'])
         else:
             results.append(f"{row['English Name']}")
+        posters.append(row['Image'])
     
-    return results
+    return results, posters
 
 # Example usage:
-recos = recommend('Steins;Gate', anime_processed_df)  # Example with English name
-print (recos)
+# recos, posters = recommend('Steins;Gate', anime_processed_df)  # Example with English name
+# print (posters)
