@@ -1,5 +1,7 @@
 # Anime Recommendation System with Streamlit
 
+![CI/CD test](https://github.com/sb2356-iiitr/Anime_Recommender_Streamlit/actions/workflows/main.yml/badge.svg)
+
 ![Anime Recommender Screenshot](images/Streamlit-1.png)
 ![Anime Recommender Screenshot](images/Streamlit-2.png)
 
