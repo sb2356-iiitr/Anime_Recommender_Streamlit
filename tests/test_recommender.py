@@ -1,6 +1,6 @@
 import pytest
 import pandas as pd
-from recommender import recommend, new_df
+from code.recommender import recommend, anime_processed_df
 
 def test_anime_not_found():
     with pytest.raises(ValueError, match="Anime not found."):
